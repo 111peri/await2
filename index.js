@@ -14,5 +14,16 @@ async function fetchData() {
 
 fetchData().catch((error) => {
 
+
     console.error('Произошла ошибка');
 })
+
+function getDataClick() {
+    fetchData().catch((error) => {
+        console.error('произошла ошибка');
+    });
+}
+
+const getDataButton = document.getElementById('getDataButton')
+    // getDataButton.addEventListener('click', getDataClick)
+getDataButton.addEventListener('click', getDataClick)
